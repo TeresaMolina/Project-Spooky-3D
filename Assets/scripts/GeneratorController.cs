@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class GeneratorController : MonoBehaviour
 {
     public Light lightToTurnOn;
-    public AudioSource activationSound; // <-- find later
+    public AudioSource activationSound;
+    public GeneratorManager manager;
 
     private bool isActivated = false;
 
@@ -19,6 +21,10 @@ public class GeneratorController : MonoBehaviour
             if (activationSound != null)
             {
                 activationSound.Play();
+            }
+            if (manager != null) 
+            {
+                manager.GeneratorActivated();            
             }
     Debug.Log("Generator Activated");
         }
