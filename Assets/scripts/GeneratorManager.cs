@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class GeneratorManager : MonoBehaviour
 {
-
     private int totalGenerators = 3;
     private int activatedGenerators = 0;
 
